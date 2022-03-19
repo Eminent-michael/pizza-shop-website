@@ -113,7 +113,7 @@ header {
 /* section1 start */
 
 .section1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/asset 5.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/asset 5.jpeg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -453,7 +453,7 @@ header {
 
 
 .section7 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/asset\ 5.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/asset\ 5.jpeg);
     background-size: cover;
     background-position: center;
 }

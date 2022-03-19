@@ -1,0 +1,1098 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+body {
+    font-family: "Space Grotesk";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sec: #414142;
+    --text: #a68462;
+    --white: #eeeeee;
+}
+
+/* header start */
+
+header {
+    height: 6em;
+    background-color: var(--sec);
+    display: flex;
+    justify-content: center;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-contents {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    margin-right: 26px !important;
+}
+
+.start-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 26px;
+    height: 90px;
+}
+
+.logo {
+    width: 3em;
+    height: 3em;
+    padding: 0.7em;
+}
+
+.logo-title span {
+    font-style: italic;
+    color: var(--text)
+}
+
+.logo-title {
+    color: white;
+    font-size: 2.6em;
+    font-weight: 500;
+}
+
+.center-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    padding: 0 0.9em;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+.nav:hover {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+.send-msg {
+    border-radius: 40px;
+    border: 2px solid white;
+    color: white;
+    padding: 16px 26px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.4s ease;
+}
+
+.send-msg:hover {
+    background-color: white;
+    color: black;
+}
+
+/* header end */
+
+/* section1 start */
+
+.section1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/asset 5.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.section1 .container {
+    padding: 90px 0;
+}
+
+
+.container {
+    margin: 0 184px;
+    padding: 200px 0 130px 0;
+    max-width: 100%;
+}
+
+.section1-title {
+    font-size: clamp(12rem, 15rem, 17rem);
+    color: white;
+}
+
+.just {
+    display: flex;
+}
+
+.div {
+    flex-grow: 1;
+    display: flex;
+    justify-items: end;
+    align-items: center;
+}
+
+.ripples {
+    color: var(--sec) !important;
+    font-weight: 700;
+    text-decoration: none;
+
+}
+
+.contact-btn {
+    width: 140px !important;
+    height: 140px !important;
+    position: relative;
+    background-color: var(--white);
+    border-radius: 50%;
+    transition: all 0.5s ease !important;
+}
+
+.contact-btn:hover {
+    transform: scale(1.2);
+}
+
+.contact-btn::before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    border: 1px solid white;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: ripple 3.4s ease-out infinite;
+}
+
+@keyframes ripple {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translate(-50%, -50%) scale(1.3);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.3);
+        opacity: 0;
+    }
+}
+
+.section1-pizzeria {
+    font-size: 2rem;
+    color: white;
+    flex: 1;
+}
+
+.section1-pizzeria p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.section1-pizzeria span {
+    color: var(--text);
+    font-style: italic;
+}
+
+
+/* section1 end */
+
+/* section2 start */
+
+.container1 {
+    background-color: var(--sec);
+    padding: 120px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 0 50px !important;
+    }
+
+    .container2, .back-cream {
+        grid-template-columns: 90px 1fr 90px !important;
+    }
+
+    .section2-contents {
+        display: flex !important;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0 90px !important;
+    }
+
+    .section2-image {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        object-fit: cover;
+    }
+
+    .section2-image img {
+        width: 100% !important;
+        height: auto;
+        justify-self: end;
+    }
+
+    .spin p {
+        font-size: 1.4rem !important;
+    }
+
+    .pizza-name, .pizza-price {
+        font-size: 1.4rem !important;
+    }
+
+    .dot-dot {
+        width: 80px !important;
+    }
+
+    .section1-title{
+        font-size: clamp(7rem, 28vw, 15rem);
+    }
+    
+}
+
+.section2-contents {
+    display: grid;
+    margin-left: 190px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section2-title {
+    font-size: 3.6rem;
+    grid-column: 1/ span3;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.section2-title span {
+    color: var(--text);
+    font-style: italic;
+}
+
+.section2-image {
+    max-height: 450px;
+    overflow: hidden;
+}
+
+.section2-image img {
+    width: 900px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+.section2-sub-content {
+    color: white;
+    margin-right: 30px;
+    line-height: 2.5rem;
+    font-size: 1.1rem;
+}
+
+/* section2 end */
+
+
+/* section2 start */
+
+.section3-image {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.section3-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* section3 end */
+
+/* section4 start */
+
+.section4 {
+    background-color: var(--sec);
+}
+
+.section4-title {
+    font-size: 3.6rem;
+    color: white;
+}
+
+.section4-title span {
+    color: var(--text);
+    font-style: italic;
+}
+
+.spin {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--white);
+    padding: 30px 0;
+}
+
+.spin p {
+    font-size: 1.9rem;
+    color: var(--white);
+    margin-left: 30px;
+}
+
+.dot-dot {
+    width: 93px;
+    animation: spin 15s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* section4 end */
+
+/* section5 start */
+
+.section5-image {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.section5-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* section5 end */
+
+
+/* section6 start */
+
+.section6 {
+    background-color: var(--sec);
+}
+
+.section6 .container {
+    padding: 80px 0;
+}
+
+.section6-title {
+    font-size: 3.6rem;
+    color: white;
+}
+
+.section6-title span {
+    color: var(--text);
+    font-style: italic;
+}
+
+.section6-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.section6-sub-contents {
+    max-width: 450px;
+}
+
+.section6-sub-contents:nth-child(1) {
+    margin-right: 20px;
+}
+
+.section6-sub-contens:nth-last-child() {
+    margin-left: 30px;
+}
+
+.section6-sub-contents h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--text)
+}
+
+.section6-sub-contents p {
+    color: var(--white);
+    line-height: 32px;
+    font-size: 1.122rem;
+}
+
+/* section6 end */
+
+
+/* section7 start */
+
+
+.section7 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/asset\ 5.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.section7-title {
+    font-size: 3.6rem;
+    color: var(--white);
+}
+
+.section7-title span {
+    color: var(--text);
+    font-style: italic;
+}
+
+.btnn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    color: white;
+    font-size: 1.09rem;
+    letter-spacing: 1px;
+    margin-top: 19px
+}
+
+
+/* section7 end */
+
+
+/* section8 start */
+
+.section8 {
+    background-color: var(--sec);
+}
+
+.section8 .container {
+    padding: 60px 0;
+}
+
+.section8-title {
+    font-size: 3.6rem;
+    color: var(--white);
+}
+
+.section8-title span {
+    color: var(--text);
+    font-style: italic;
+}
+
+.section8-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1f);
+    grid-template-rows: 1fr 1fr;
+    margin-top: 90px;
+}
+
+.section8-grid-1 {
+    grid-column: 1 / span2;
+    color: var(--white);
+    line-height: 1.7;
+    font-size: 1.1rem;
+    margin-right: 20px;
+}
+
+.section8-grid-2 {
+    grid-column: 2 / span2;
+    grid-row: 1 / span3;
+    width: 500px;
+    height: 100%;
+}
+
+.section8-grid-2 img {
+    width: 100%;
+    height: auto;
+}
+
+.section8-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: 20px;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.tt {
+    color: var(--text);
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.-one p {
+    color: var(--white);
+    font-size: 1.1rem
+}
+
+@media screen and (max-width: 1024px) {
+    .section8-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .section8-grid-3 {
+        order: 2;
+        margin-top: 70px;
+    }
+
+    .section8-grid-2 {
+        order: 3;
+        width: 400px;
+        margin-top: 50px;
+    }
+
+    .section8-grid-1 {
+        order: 1;
+        margin-top: 50px;
+    }
+
+    .section8-title {
+        font-size: 3rem;
+    }
+}
+
+
+/* section8 end */
+
+
+/* section9 start */
+
+.section9 {
+    background-color: var(--sec);
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 184px 1fr 184px;
+    grid-template-rows: 1fr;
+    padding: 110px 0;
+}
+
+.section9-title {
+    font-size: 3.6rem;
+    color: var(--white);
+    text-align: center;
+    grid-column: 1 / span1;
+
+}
+
+.section9-title span {
+    color: var(--text);
+    font-style: italic;
+}
+
+.section9-content {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--white);
+    padding: 39px 0;
+}
+
+.section9-content:nth-child(5), .section9-content:last-child {
+    border-bottom: none;
+}
+
+
+.pizza-name, .pizza-price {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+
+.pizza-price {
+    color: var(--text);
+    font-style: italic;
+}
+
+.sec {
+    grid-column: 2;
+}
+
+.back-cream {
+    background-color: var(--text);
+    width: 100%;
+    grid-column: 1 / span 4;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 184px 1fr 184px;
+}
+
+.pre1 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.pre {
+    grid-column: 2;
+}
+
+.prem {
+    color: var(--white);
+
+}
+
+
+
+/* section9 end */
+
+
+.section0 {
+    background-color: var(--sec);
+}
+
+.section0 .container {
+    padding: 78px 0;
+}
+
+
+.section0-title {
+    font-size: 3.6rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.section0-title span, .section0-subtitle span {
+    font-style: italic;
+    color: var(--text);
+}
+
+.section0-subtitle {
+    color: white;
+    text-align: center;
+    font-size: 2.3rem;
+    margin-top: 20px;
+}
+
+.card {
+    margin-top: 50px;
+    background-color: white;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 60px;
+    padding: 40px 0;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid var(--sec);
+    height: 50px;
+    outline: none;
+}
+
+textarea {
+    border: none;
+    border-bottom: 1px solid var(--sec);
+    font: 400 1rem 'Space Grotesk';
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 66px;
+    resize: vertical;
+    outline: none;
+}
+
+input:hover, textarea:hover {
+    border-bottom: 1px solid lightgray;
+}
+
+.border-down {
+    margin: 10px 0;
+    font-size: 1rem;
+    padding: 0 19px;
+    background-color: transparent;
+}
+
+.button {
+    background-color: black;
+    border: none;
+    height: 50px;
+    border-radius: 40px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 30px 0;
+    transition: 0.4s ease;
+}
+
+.button:hover {
+    background-color: #d5d5d5;
+    color: black;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.no {
+    color: white;
+}
+
+.media a {
+    text-decoration: none;
+    color: white;
+}
+
+/* section9 end */
+
+
+
+/* media-quiries */
+
+@media screen and (max-width: 954px) {
+    .container {
+        margin: 0 100px !important;
+    }
+
+    .section8-title, .section2-title, .section4-title, .section6-title, .section7-title, .section9-title, .section0-title {
+        font-size: 3rem;
+    }
+
+    .logo-title{
+        font-size: 1.6rem;
+    }
+    .logo{
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .nav-menu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--sec);
+        z-index: 1;
+        padding: 25px 0px;
+        margin-right: 0px !important;
+    }
+    .center-nav, .nav{
+        flex-direction: column;
+        margin: 13px 0;
+        text-align:center; 
+    }
+
+    .just {
+        flex-direction: column;
+    }
+    .div{
+        order: 2;
+        justify-content: center;
+    }
+
+    .nav-menu.active{
+        display: flex;
+    }
+
+
+    .ham-main{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .hamburger{
+        display: block;
+        margin-right: 26px;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:last-child{
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .section8-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .section8-grid-3 {
+        order: 2;
+        margin-top: 70px;
+    }
+
+    .section8-grid-2 {
+        order: 3;
+        width: 400px;
+        margin-top: 50px;
+    }
+
+    .section8-grid-1 {
+        order: 1;
+        margin-top: 50px;
+    }
+
+    .section8-title {
+        font-size: 3rem;
+    }
+
+    .container {
+        margin: 0 110px;
+    }
+
+    .section2-contents {
+        margin-left: 110px;
+    }
+
+    .container2 {
+        margin: 0 110px;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+
+    .section2-contents {
+        margin: 0 40px !important;
+    }
+
+    .section1-title {
+        font-size: clamp(5rem, 3vw, 7rm);
+    }
+
+    .section6-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container2, .back-cream {
+        grid-template-columns: 40px 1fr 40px !important;
+    }
+
+    .spin p {
+        font-size: 1.1rem !important;
+    }
+
+    .dot-dot {
+        width: 65px !important;
+    }
+
+    .div {
+        justify-content: center;
+        order: 2;
+    }
+
+    .tt, .-one p {
+        font-size: 0.9rem !important;
+    }
+
+    .section8-grid-1, .section6-sub-contents p {
+        font-size: .9rem !important;
+    }
+
+    .section0-subtitle {
+        font-size: 1.8rem !important;
+    }
+
+    .card-content {
+        margin: 0 30px !important;
+    }
+
+    .no, .media {
+        font-size: .8rem !important;
+    }
+
+    .container {
+        margin: 0 39px !important;
+    }
+
+    .container2 {
+        margin: 0 39px;
+    }
+
+    .section9-content {
+        padding: 35px 0;
+    }
+
+    .section6-title {
+        text-align: center;
+    }
+
+    /* .logo-title span {
+        font-style: italic;
+        color: var(--text)
+    }
+
+    .logo-title {
+        color: white;
+        font-size: 1.7em;
+        font-weight: 500;
+    } */
+    .pizza-name, .pizza-price{
+        font-size: 1.06rem !important;
+    }
+    .section9-content{
+        padding: 25px 0;
+    }
+    .container2{
+        margin: 0 27px;
+    }
+}
+
+
+
+@media screen and (max-width: 375px) {
+    .container {
+        margin: 0 28px !important;
+    }
+
+    .section1-title {
+        font-size: 8rem;
+    }
+
+    .section2-contents {
+        margin: 0 27px !important;
+    }
+
+    .section8-grid-2 {
+        width: 300px;
+        margin-top: 50px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .section2-sub-content {
+        font-size: 0.9rem !important;
+        line-height: 1.8;
+    }
+
+    .section1-title {
+        font-size: 7rem !important;
+    }
+
+    .section1-pizzeria {
+        font-size: 1.4rem !important;
+    }
+
+    .section8-title {
+        font-size: 2rem !important;
+    }
+    .section8-grid-2{
+        width: 100%;
+    }
+    .section8-grid-2{
+        width: 100%;
+        height: auto;
+    }
+
+    .container {
+        margin: 0 20px !important;
+    }
+
+    .section4-title {
+        font-size: 2.5rem !important;
+    }
+
+    .pizza-name, .pizza-price {
+        font-size: 0.8rem !important;
+    }
+
+    .section9-content {
+        padding: 18px 0;
+    }
+    .section9-title{
+        font-size: 2rem;
+    }
+    .container2{
+        padding: 40px 0;
+    }
+
+    .section0-title {
+        font-size: 2rem !important;
+    }
+
+    .section0-subtitle {
+        font-size: 1rem !important;
+    }
+
+    .card-content {
+        margin: 0 30px !important;
+        padding: 20px 0 !important;
+    }
+
+    input, textarea {
+        font-size: 0.55rem !important;
+        height: 25px;
+    }
+
+    .button {
+        height: 27px;
+        font-size: 0.57rem;
+    }
+    .media a, .no{
+        font-size: .6rem;
+    }
+
+    .spin p{
+        font-size: 0.7rem !important;
+        margin-left: 13px;
+    }
+    .spin{
+        padding: 16px 0;
+    }
+    .dot-dot{
+        width: 40px !important;
+    }
+
+    .logo{
+        width: 2rem;
+        height: 2rem;
+    }
+    .logo-title{
+        font-size: 1.1rem;
+    }
+}

@@ -275,7 +275,14 @@ header {
     .section1-title{
         font-size: clamp(7rem, 28vw, 15rem);
     }
-    
+
+    .section6-sub-contents p{
+        font-size: 0.99rem !important;
+    }
+    .section6-flex{
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .section2-contents {

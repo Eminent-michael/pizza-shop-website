@@ -233,6 +233,9 @@ header {
     .container2, .back-cream {
         grid-template-columns: 90px 1fr 90px !important;
     }
+    .container2{
+        margin: 0 60px !important;
+    }
 
     .section2-contents {
         display: flex !important;
@@ -259,11 +262,14 @@ header {
     }
 
     .pizza-name, .pizza-price {
-        font-size: 1.4rem !important;
+        font-size: 1.1rem !important;
     }
 
     .dot-dot {
-        width: 80px !important;
+        width: 60px !important;
+    }
+    .spin p{
+        font-size: 1rem !important;
     }
 
     .section1-title{
@@ -960,16 +966,6 @@ input:hover, textarea:hover {
         text-align: center;
     }
 
-    /* .logo-title span {
-        font-style: italic;
-        color: var(--text)
-    }
-
-    .logo-title {
-        color: white;
-        font-size: 1.7em;
-        font-weight: 500;
-    } */
     .pizza-name, .pizza-price{
         font-size: 1.06rem !important;
     }
@@ -978,6 +974,35 @@ input:hover, textarea:hover {
     }
     .container2{
         margin: 0 27px;
+    }
+    input, textarea {
+        font-size: 0.55rem !important;
+        height: 25px;
+        padding: 0 8px !important;
+    }
+
+    .button {
+        height: 27px;
+        font-size: 0.57rem;
+    }
+    .media a, .no{
+        font-size: .6rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    input, textarea {
+        font-size: 0.55rem !important;
+        height: 25px;
+        padding: 0 8px !important;
+    }
+
+    .button {
+        height: 27px;
+        font-size: 0.57rem;
+    }
+    .media a, .no{
+        font-size: .6rem;
     }
 }
 

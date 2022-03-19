@@ -283,6 +283,9 @@ header {
         flex-direction: column;
         text-align: center;
     }
+    .section8-grid-1, .section8-grid-3{
+        font-size: 0.99rem !important;
+    }
 }
 
 .section2-contents {
